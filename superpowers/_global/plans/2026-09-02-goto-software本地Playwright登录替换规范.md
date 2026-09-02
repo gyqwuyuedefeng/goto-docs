@@ -64,17 +64,22 @@ test "$missing" -eq 0
 
 预期：命令退出码为 `1`，并报告当前缺少的依赖、绝对路径、固定码、干净门禁或恢复语义。
 
-在 `/mnt/f/IdeaProjects/goto-software` 运行：
+在 `/mnt/f/IdeaProjects/goto-software/goto-web` 运行：
 
 ```bash
-git status --short -- \
-  'goto-web/src/views/login.vue' \
-  'goto-web/src/views/login公众号验证码登录.vue'
-test -f 'goto-web/src/views/login.vue'
-test -f 'goto-web/src/views/login公众号验证码登录.vue'
+set -e
+test "$(git rev-parse --show-toplevel)" = "/mnt/f/IdeaProjects/goto-software/goto-web"
+git ls-files --error-unmatch \
+  'src/views/login.vue' \
+  'src/views/login公众号验证码登录.vue'
+git diff --quiet -- 'src/views/login.vue'
+git diff --cached --quiet -- 'src/views/login.vue'
+git status --short -- 'src/views/login.vue'
+test -f 'src/views/login.vue'
+test -f 'src/views/login公众号验证码登录.vue'
 ```
 
-预期：两份文件均存在，且 `git status` 没有输出；本任务不得继续修改它们。
+预期：Git 根精确为独立 `goto-web` 仓库，两份文件均已跟踪且存在，`login.vue` 没有已暂存或未暂存修改，`git status` 没有输出；本任务不得继续修改它们。
 
 - [ ] **步骤 2：声明项目入口对全局本地验收规则的直接依赖**
 
@@ -165,15 +170,20 @@ git diff --stat -- code/01_Project_Specs/goto_software_spec.md
 
 预期：格式检查通过，目标规范未被暂存，状态仍为工作区修改，diff 只涉及该项目入口。
 
-在 `/mnt/f/IdeaProjects/goto-software` 运行：
+在 `/mnt/f/IdeaProjects/goto-software/goto-web` 运行：
 
 ```bash
-git status --short -- \
-  'goto-web/src/views/login.vue' \
-  'goto-web/src/views/login公众号验证码登录.vue'
+set -e
+test "$(git rev-parse --show-toplevel)" = "/mnt/f/IdeaProjects/goto-software/goto-web"
+git ls-files --error-unmatch \
+  'src/views/login.vue' \
+  'src/views/login公众号验证码登录.vue'
+git diff --quiet -- 'src/views/login.vue'
+git diff --cached --quiet -- 'src/views/login.vue'
+git status --short -- 'src/views/login.vue'
 ```
 
-预期：没有输出，证明本次只编写规范，未实际替换或修改两个 Vue 文件。
+预期：所有检查均通过且 `git status` 没有输出，证明本次只编写规范，未实际替换或修改两个 Vue 文件。
 
 - [ ] **步骤 7：报告结果但不提交目标规范**
 
