@@ -53,6 +53,9 @@ for requirement in \
   '666888' \
   'SHA-256' \
   '已暂存.*未暂存' \
+  '独立 Git 根' \
+  '源/目标文件均已跟踪' \
+  '检查命令失败' \
   '成功、失败或中止.*恢复'; do
   if ! rg -q "$requirement" "$spec"; then
     printf '缺少规范语义：%s\n' "$requirement"
@@ -108,11 +111,12 @@ requires:
 - 验收必须使用 `home` Spring profile，即传入 JVM 参数 `-Dspring.profiles.active=home`，以加载 `application-home.yml`；不得因默认 profile 的数据库认证失败而改用共享默认端口或绕过配置。
 - 启动命令形态为 `java -Denv=local -Dspring.profiles.active=home -jar system/target/goto-manager.jar --server.port=<本次动态端口>`；前后端端口选择、前台托管、关闭和 Playwright 隔离仍服从全局本地运行验收规范。
 - Playwright 验收需要微信公众号验证码登录时，源文件固定为 `/mnt/f/IdeaProjects/goto-software/goto-web/src/views/login公众号验证码登录.vue`，目标文件固定为 `/mnt/f/IdeaProjects/goto-software/goto-web/src/views/login.vue`；替换前必须确认两者均存在。
-- 替换目标文件前，必须分别确认它没有已暂存和未暂存修改；任一检查发现修改时立即停止，不得覆盖，并向用户报告准确状态。
+- `goto-web` 独立 Git 根固定是 `/mnt/f/IdeaProjects/goto-software/goto-web`；替换前必须在该仓库确认 `git rev-parse --show-toplevel` 输出完全匹配该根、源/目标文件均已跟踪，并分别通过 `git diff --quiet -- src/views/login.vue` 和 `git diff --cached --quiet -- src/views/login.vue` 确认目标文件没有未暂存和已暂存修改。
+- 仓库归属不符、路径未跟踪、检查命令失败或任一差异存在时一律立即停止，不得覆盖，并向用户报告准确状态。
 - 目标文件干净时，先在本次命令创建的项目外临时目录中保存其原始字节副本并记录 SHA-256，再把源文件的完整内容复制到目标文件；只允许复制，不得移动、删除或修改源文件。
 - 本地登录时在验证码输入框使用固定验证码 `666888`；该验证码只允许配合 `-Denv=local` 的本地受控验收，不得用于生产、共享环境或其他 profile。
 - 无论验收成功、失败、中止或后续步骤报错，都必须恢复目标文件的原始字节内容；验收失败时也必须先完成恢复与校验，再报告失败。
-- 恢复后必须确认目标文件 SHA-256 与替换前一致，并确认没有新增已暂存或未暂存差异；任一检查失败时必须保留临时备份、报告残留状态，且不得声称验收完成。
+- 恢复后必须确认目标文件 SHA-256 与替换前一致，并在该独立仓库复核目标文件无新增已暂存或未暂存差异；任一检查失败时必须保留临时备份、报告残留状态，且不得声称验收完成。
 - 不得提交临时替换后的目标文件，也不得把固定验证码或备份内容固化到前端代码、测试脚本、配置或其他项目文件；Playwright 截图、trace、video 和输出继续使用本次命令创建的临时目录。
 
 执行要求：启动 goto-software 本地前端、后端或进行相关 Playwright 验收前，先读取本节与全局 `rules/local-runtime-verification.md`。
@@ -129,10 +133,16 @@ for requirement in \
   '/mnt/f/IdeaProjects/goto-software/goto-web/src/views/login\.vue' \
   '/mnt/f/IdeaProjects/goto-software/goto-web/src/views/login公众号验证码登录\.vue' \
   '666888.*-Denv=local' \
-  '已暂存和未暂存修改' \
+  '独立 Git 根固定是 `/mnt/f/IdeaProjects/goto-software/goto-web`' \
+  'git rev-parse --show-toplevel' \
+  '源/目标文件均已跟踪' \
+  'git diff --quiet -- src/views/login\.vue' \
+  'git diff --cached --quiet -- src/views/login\.vue' \
+  '检查命令失败.*停止' \
   '原始字节副本.*SHA-256' \
   '成功、失败、中止.*恢复' \
   'SHA-256 与替换前一致' \
+  '独立仓库复核.*无新增已暂存或未暂存差异' \
   '不得提交临时替换后的目标文件'; do
   rg -q "$requirement" "$spec" || exit 1
 done
