@@ -21,3 +21,14 @@ related_change_set_ids: []
 - [x] 执行两个 Bash 测试、`bash -n`、仅解析外部八个脚本的 R 语法检查、规范校验、91 项规则测试以及 `git diff --check`，均通过。
 - [x] 在各主仓 HEAD 未变化且目标文件干净时快进集成，合入后的两个 Bash 测试、规范校验与 91 项规则测试再次通过，保留原有无关修改。
 - [x] 在 `goto-docs/change-sets/completions/2026/09/` 归档唯一总结，记录真实验证结果与跨仓提交；文档归档提交按同一 ID 核验。
+
+## 本地测试规范补充
+
+沿用同一 ID；用户已明确生产允许所有测试写入。本轮实施只改规范和合同测试，不执行应用测试或生产数据写入。
+
+- [x] 更新规范合同测试：goto-software 入口和 local-testing 细则仅覆盖 `global.database-readonly`，其余项目保持原覆盖集合，索引与入口均指向新细则；RED 阶段确认新细则、覆盖声明和 Maven 描述三项缺失导致失败。
+- [x] 新增 `code/01_Project_Specs/goto-software/local-testing.md`，写明服务矩阵、编译依赖、Java/R 路径、生产资源复用和共用任务通道时依次验收的规则。
+- [x] 更新 goto-software 项目入口和触发索引；保留机密 R 包边界，登记持续的生产测试写入授权及其项目范围。
+- [x] 修正 `rules/maven.md` 过时的 hsmap-only 描述，使公共规则引用当前平台的既有项目映射，不改包装脚本。
+- [x] 规范校验、完整 `test_validate_rules.py` 的 92 项测试和 `git diff --check` 均通过；授权仅限本项目测试，机密边界未放宽。
+- [x] 复核主仓最新 HEAD 后快进集成；实际结果上的规范校验、92 项规则测试和 diff 检查通过，更新原有唯一总结与文档提交，未推送远端。
