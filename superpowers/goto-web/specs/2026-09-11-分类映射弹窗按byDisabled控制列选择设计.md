@@ -45,19 +45,21 @@ related_change_set_ids:
 ## 组件与数据流
 
 1. `classifyItem.vue` 的 by 区域点击统一调用 `chooseColumn()`，不再因 `byDisabled=true` 丢失入口。
-2. `classifyItemMixins.js` 将当前分类项的 `byDisabled` 写入弹窗参数。
-3. `classifyChooseHeaderInfo.vue`：
+2. `by.vue` 在 `byDisabled=true` 时隐藏会清空当前 by 的“重置”入口。
+3. `classifyItemMixins.js` 将当前分类项的 `byDisabled` 写入弹窗参数。
+4. `classifyChooseHeaderInfo.vue`：
    - 列卡片展示禁用状态；
    - `byDisabled=true` 时，列卡片点击和清空操作不改变状态；
    - 打开弹窗时沿用当前已选 by 列；
    - 确认时仍把当前列和映射模式交给既有回调。
-4. `limitType` 的过滤、映射按钮禁用和类型不适配警告逻辑保持不变。
+5. `limitType` 的过滤、映射按钮禁用和类型不适配警告逻辑保持不变。
 
 ## 测试与验收
 
 ### 单元测试
 
 - `byDisabled=true` 时分类项仍具有打开弹窗的点击入口。
+- `byDisabled=true` 时分类项外部的重置入口不可用。
 - 弹窗列卡片和清空操作处于禁用状态，直接调用处理方法也不会改变 by 选择。
 - `byDisabled=false` 时列选择行为保持原样。
 - 映射按钮仍只受 `limitType` 控制，不受 `byDisabled` 影响。
