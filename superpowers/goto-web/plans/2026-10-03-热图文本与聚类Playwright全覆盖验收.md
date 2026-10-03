@@ -79,3 +79,38 @@ gotoBase 源码仓元数据的 Windows Git fetch 成功确认本地与 origin/ma
 本次20条自有测试记录（含失败前置尝试）均已通过应用删除，MySQL只读复核残留0条；20个UUID目录和本轮公开诊断临时目录已删除。前端、system、隔离Redis均Ctrl-C关闭，43512、43966、44476、43102均释放；登录页SHA-256恢复一致且已暂存/未暂存差异检查通过，临时Redis密钥/配置和浏览器认证状态已清理。关闭system时退出130，最终端口复核已确认释放。保留真实检测失败并将变更集整体维持 blocked；需要公开检测链路修复或确认文字主值的对外契约后重新运行同一脚本。历史完整 R 绘图失败仍需对应出图验收。
 
 代码已合入并推送 goto-web/master=003b1bcd4d4be09c8f6486a1cdbb00e8ea8903a1。文档由独立任务分支归档到远端main；本地文档main有其它正在执行的SVG修改，保留其现场，不合并到该工作区。测试结论仍为未通过；没有部署生产功能。
+
+
+## 用户要求修复后的最小公开调用排查
+
+本次将公开函数执行与返回解析分开记录。数值对照完成公开调用并解析为合法 JSON；两类失败明确发生在 `public_call`，不属于 Java Map/JSON 返回兼容问题。错误原文未回显，只经本机固定关键词分类为 `numeric_related_error`。此分类只说明异常涉及数值，并不揭示包内部实现或准确错误语句。
+
+进一步用相同文件仅替换 Main 内容作对照；其余行、列、次值和标签全部保留，两个失败文件均恢复成功。另生成只有 X/Y/Main 的 3×3 对称数据，排除附加列、中文内容和不对称数据的干扰：
+
+| 最小文件 | Main 内容 | 公开调用与契约结果 |
+| --- | --- | --- |
+| numericMinimal.xlsx | `(X序号+1)×(Y序号+1)` 数值 | 成功，true/raw |
+| textMinimal.xlsx | 相同数值前加 `category_` | public_call失败，numeric_related_error |
+| mixedMinimal.xlsx | 对角线数值，其余 `category_` 文本 | public_call失败，numeric_related_error |
+| textNumeric_numericMain.xlsx | 原 textNumeric，只替换 Main 为数值 | 成功，true/raw |
+| mixedText_numericMain.xlsx | 原 mixedText，只替换 Main 为数值 | 成功，true/raw |
+
+这已把当前失败定位到公开检测函数处理非数值主值的行为。Java 按用户约定传入 file/col_col/row_col/value_col，不读取或转换单元格；调用端没有已证实可修复的传参错误。2026-10-03 本次 Windows git.exe fetch origin 退出0，gotoBase HEAD 与 origin/main 均为 cd70a32d02da884e8769c57cd63547870776206d，没有新包提交可获取。版本0.1.0不是安装提交的证明；此轮没有重复重装。
+
+### 具体修复路径与验收条件
+
+1. 由 gotoBase 维护者确认并补齐 `check_symmetry` 对纯文本、数字与文本混合主值的公开输入支持。当前前端需求包含主值非数值时隐藏数值格式控制，因此不能通过删掉该覆盖项宣称通过。若包对外约定只支持数值，则需用户确认业务范围和相应预期错误处理，不能自行把它当作成功。
+2. 支持这些输入时，对称性须按真实输入判断，返回合法 isSymmetric 布尔值和 dataType；不能在前后端强制false、用0替换文字或跳过检测。支持文字的具体dataType约定仍待维护者明确。数值最小对照的true/raw结果须保持。
+3. 维护者提交包更新后，沿用用户已授权的外部工具更新并重装，检查安装状态；重新以公开调用验证上述最小文件。当前项目规范禁止 Agent 读取或修改 gotoBase 内部源码，因此本轮不能代替包维护者实施内部修复。
+4. 最小用例通过后，重跑同一受控真实页面脚本，先验证一个模板，再执行8模板全覆盖；保存标记、检测、重载均应按对外约定成功。历史完整R出图仍须单独执行真实出图验证。
+
+公开复现调用（不涉及包内部实现）：
+
+```r
+gotoBase::check_symmetry(
+  file = "textMinimal.xlsx",
+  col_col = "X", row_col = "Y", value_col = "Main"
+)
+```
+
+本轮没有修改生产前端/Java代码，也没有重跑尚无修复的全覆盖脚本。没有启动新应用服务、替换登录页或写入数据库。公开探针使用本次独立临时业务目录，调用后已删除；现有Rserve容器保留。安全阶段结果保存在 /tmp/heatmap-detection-debug-ve6603a0/phased-public-probe-result.json 和 minimal-public-probe-result.json。整体仍blocked，尚未修复或验收通过。
