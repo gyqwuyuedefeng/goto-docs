@@ -1,0 +1,386 @@
+{
+  "document_type": "delivery_validation_evidence",
+  "change_set_id": "CS-20261003-59747383-200e-46c6-b112-99531f61e0cd",
+  "scope_note": "G1基础验证。旧工具结果仅作历史诊断，当前结果不得替代页面、服务启动、库单测、跨仓自动制品登记或真实异步链路。goto当前仍在依赖解析阶段失败，四类JUnit未执行。只归档状态、身份和摘要，不保存环境值、token或业务响应正文。",
+  "records": [
+    {
+      "goal": "G1 基础检查；编译不冒充单测，未证明依赖源码/制品及真实资源边界则联合验收仍阻断",
+      "passed": true,
+      "identity_error": null,
+      "before": {
+        "root": "/mnt/f/IdeaProjects/worktrees/goto-software/goto-web/feat/017-model-independent-delivery",
+        "common_dir": "/mnt/f/IdeaProjects/goto-software/goto-web/.git",
+        "sha": "08f4718351ccd6505600a3b49f97b20ef1d536d4",
+        "config_sha256": "1b7159a520184ef3968d4e906abfa88d3df25d62cdae1d37a7be5a184d76f146",
+        "inputs_sha256": "2721bebb08e386a81279f2e0c2b441efce22fc72c4c274cfc6396125bb188a06",
+        "environment_sha256": "542b08d5b5be231f1a162038b071aab4a46a0443247d4fd5d0c668bb3f72ad6e"
+      },
+      "after": {
+        "root": "/mnt/f/IdeaProjects/worktrees/goto-software/goto-web/feat/017-model-independent-delivery",
+        "common_dir": "/mnt/f/IdeaProjects/goto-software/goto-web/.git",
+        "sha": "08f4718351ccd6505600a3b49f97b20ef1d536d4",
+        "config_sha256": "1b7159a520184ef3968d4e906abfa88d3df25d62cdae1d37a7be5a184d76f146",
+        "inputs_sha256": "2721bebb08e386a81279f2e0c2b441efce22fc72c4c274cfc6396125bb188a06",
+        "environment_sha256": "542b08d5b5be231f1a162038b071aab4a46a0443247d4fd5d0c668bb3f72ad6e"
+      },
+      "tool_sha256": "4e40cf727f6329def500e2d7fbe109cc32ad379fb9f2acf6351c00b91ba9fcf6",
+      "request_sha256": "d0120658c8dd471b9d1e2f620ef79fec2b0f494f7a40963f6416bea2aa1f7af5",
+      "change_set_ids": [
+        "CS-20261003-59747383-200e-46c6-b112-99531f61e0cd"
+      ],
+      "checks": [
+        {
+          "id": "goto-web.build",
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 133.916
+        },
+        {
+          "id": "goto-web.offline-unit",
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 45.073,
+          "cases": {
+            "goto-web.offline-unit": "passed"
+          },
+          "evidence": {}
+        }
+      ],
+      "integrated": false,
+      "pushed": false,
+      "deployed": false,
+      "run": "goto-web-run",
+      "raw_result_path": "/tmp/delivery-g1.17VUmCiQ/goto-web-run/result.json",
+      "raw_result_sha256": "5f6c6383c66b3ccf71693b0867549580175024327044e2f0b4aa2c247356a760",
+      "log_hashes": {
+        "goto-web.build.log": "0faa7f5d8b213f2613707adb1b38c8050a0761f9f9ba9a73f0ef3be7fe93bf1a",
+        "goto-web.offline-unit.log": "2cb82637eb03ce970d386f7cad07536c4d83c7d72f6b5e0cdb393ae93ff907f7"
+      }
+    },
+    {
+      "goal": "G1 基础检查；编译不冒充单测，未证明依赖源码/制品及真实资源边界则联合验收仍阻断",
+      "passed": false,
+      "identity_error": null,
+      "before": {
+        "root": "/mnt/f/IdeaProjects/worktrees/goto-software/goto/feat/014-model-independent-delivery",
+        "common_dir": "/mnt/f/IdeaProjects/goto-software/goto/.git",
+        "sha": "8045230f656a852db3e6a1261ccf2dc4c7c9b11d",
+        "config_sha256": "322e391ad10666cab673129c053129cc66d699825c048fde3583757f208cf22a",
+        "inputs_sha256": "7fd137b21ce529cef37395e20cbe69e3f5a3bef88895993af9443cb3bac78294",
+        "environment_sha256": "e4d66aa3553e5a86fd44cafe533273b472995e1e53b1034eb07cb89872c73323"
+      },
+      "after": {
+        "root": "/mnt/f/IdeaProjects/worktrees/goto-software/goto/feat/014-model-independent-delivery",
+        "common_dir": "/mnt/f/IdeaProjects/goto-software/goto/.git",
+        "sha": "8045230f656a852db3e6a1261ccf2dc4c7c9b11d",
+        "config_sha256": "322e391ad10666cab673129c053129cc66d699825c048fde3583757f208cf22a",
+        "inputs_sha256": "7fd137b21ce529cef37395e20cbe69e3f5a3bef88895993af9443cb3bac78294",
+        "environment_sha256": "e4d66aa3553e5a86fd44cafe533273b472995e1e53b1034eb07cb89872c73323"
+      },
+      "tool_sha256": "4e40cf727f6329def500e2d7fbe109cc32ad379fb9f2acf6351c00b91ba9fcf6",
+      "request_sha256": "0c0c9e29737f648a4effaf8c3d8ec4f7b2db21037ed4bcf4ae47fd2e063c19fc",
+      "change_set_ids": [
+        "CS-20261003-59747383-200e-46c6-b112-99531f61e0cd"
+      ],
+      "checks": [
+        {
+          "id": "goto.contracts",
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 207.443
+        }
+      ],
+      "integrated": false,
+      "pushed": false,
+      "deployed": false,
+      "run": "goto-run",
+      "raw_result_path": "/tmp/delivery-g1.17VUmCiQ/goto-run/result.json",
+      "raw_result_sha256": "780e1a0515dfd6f6b5d6d7632609092aaa3c4ab54645361f40ac5a5738a333e8",
+      "log_hashes": {
+        "goto-contracts.log": "1294f41202cdb25e07640c1c1d9f026231b4582dc77586d69f8f24ceffd6a748",
+        "goto.contracts.log": "d7ead02360931c80e5fcbf1258aab4583bae55f646091d34220844f3216d5a8c"
+      }
+    },
+    {
+      "goal": "G1 基础检查；编译不冒充单测，未证明依赖源码/制品及真实资源边界则联合验收仍阻断",
+      "passed": true,
+      "identity_error": null,
+      "before": {
+        "root": "/mnt/f/IdeaProjects/worktrees/goto-software/rsession/feat/002-model-independent-delivery",
+        "common_dir": "/mnt/f/IdeaProjects/goto-software/rsession/.git",
+        "sha": "794a9b9d4f55f7eebf538c36027bbb73fa71d579",
+        "config_sha256": "44983048c21be82bd9722f22c34a8ba39f190f8271a96ac51ae334bfbf1d30fb",
+        "inputs_sha256": "3112ab7f45da609f184db8f20ad18a7c3f3bc3471299e3074ff6fc6304254651",
+        "environment_sha256": "f44281d30ff629b9f2045e3975b8d0a3f9e3074e2a64739ef7aa0317e65158c2"
+      },
+      "after": {
+        "root": "/mnt/f/IdeaProjects/worktrees/goto-software/rsession/feat/002-model-independent-delivery",
+        "common_dir": "/mnt/f/IdeaProjects/goto-software/rsession/.git",
+        "sha": "794a9b9d4f55f7eebf538c36027bbb73fa71d579",
+        "config_sha256": "44983048c21be82bd9722f22c34a8ba39f190f8271a96ac51ae334bfbf1d30fb",
+        "inputs_sha256": "3112ab7f45da609f184db8f20ad18a7c3f3bc3471299e3074ff6fc6304254651",
+        "environment_sha256": "f44281d30ff629b9f2045e3975b8d0a3f9e3074e2a64739ef7aa0317e65158c2"
+      },
+      "tool_sha256": "4e40cf727f6329def500e2d7fbe109cc32ad379fb9f2acf6351c00b91ba9fcf6",
+      "request_sha256": "9b9447e5ae4e7bfcedd6fde1a4d773ea570811ef5ab05d08db5ef99c91ef6999",
+      "change_set_ids": [
+        "CS-20261003-59747383-200e-46c6-b112-99531f61e0cd"
+      ],
+      "checks": [
+        {
+          "id": "rsession.compile-only",
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 327.143
+        }
+      ],
+      "integrated": false,
+      "pushed": false,
+      "deployed": false,
+      "run": "rsession-run",
+      "raw_result_path": "/tmp/delivery-g1.17VUmCiQ/rsession-run/result.json",
+      "raw_result_sha256": "fe6a52fa6efce25a8b1c73bfedf38cb9e9ffa9b283b2303618a19585fd8010d9",
+      "log_hashes": {
+        "rsession.compile-only.log": "eb12916eaf95ba4846750dfadb9ba0e73b4d2f669d7c5d8bd697fbd139a45b2f"
+      }
+    },
+    {
+      "goal": "G1 基础检查；编译不冒充单测，未证明依赖源码/制品及真实资源边界则联合验收仍阻断",
+      "passed": false,
+      "identity_error": null,
+      "before": {
+        "root": "/mnt/f/IdeaProjects/worktrees/goto-software/freedom-public/feat/008-model-independent-delivery",
+        "common_dir": "/mnt/f/IdeaProjects/goto-software/freedom-public/.git",
+        "sha": "12bf25bbb97666c1f538ec9d597fb99a61aa60e9",
+        "config_sha256": "8c5c50c41b63eda1fc379c0485a93977828e0a713275524b9ff53f66088f2054",
+        "inputs_sha256": "35346205f20a32c26ff19bdf0d2ef8033039d91076a2eddf73cafa0e2f7ba9bd",
+        "environment_sha256": "e96fdd445445ec0f2a8813429875ffe468f61a17360297ab4165bf8325cfa981"
+      },
+      "after": {
+        "root": "/mnt/f/IdeaProjects/worktrees/goto-software/freedom-public/feat/008-model-independent-delivery",
+        "common_dir": "/mnt/f/IdeaProjects/goto-software/freedom-public/.git",
+        "sha": "12bf25bbb97666c1f538ec9d597fb99a61aa60e9",
+        "config_sha256": "8c5c50c41b63eda1fc379c0485a93977828e0a713275524b9ff53f66088f2054",
+        "inputs_sha256": "35346205f20a32c26ff19bdf0d2ef8033039d91076a2eddf73cafa0e2f7ba9bd",
+        "environment_sha256": "e96fdd445445ec0f2a8813429875ffe468f61a17360297ab4165bf8325cfa981"
+      },
+      "tool_sha256": "4e40cf727f6329def500e2d7fbe109cc32ad379fb9f2acf6351c00b91ba9fcf6",
+      "request_sha256": "85ba2e7e9a8337bc6489db278403e38a5f2a2221a67ed9880c264100bd842e13",
+      "change_set_ids": [
+        "CS-20261003-59747383-200e-46c6-b112-99531f61e0cd"
+      ],
+      "checks": [
+        {
+          "id": "freedom.compile-only",
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 122.445
+        }
+      ],
+      "integrated": false,
+      "pushed": false,
+      "deployed": false,
+      "run": "freedom-public-run",
+      "raw_result_path": "/tmp/delivery-g1.17VUmCiQ/freedom-public-run/result.json",
+      "raw_result_sha256": "9cb88cefa4b73fec695f93c4aaba2353017c511c49202686d198aec00b0a7f7c",
+      "log_hashes": {
+        "freedom.compile-only.log": "94417a8ec3683edbbb4a020a6b6e25fa4443be526064957922c90f4b062da76f"
+      }
+    },
+    {
+      "goal": "G1 基础检查；编译不冒充单测，未证明依赖源码/制品及真实资源边界则联合验收仍阻断",
+      "passed": true,
+      "identity_error": null,
+      "before": {
+        "root": "/mnt/f/IdeaProjects/worktrees/goto-software/goto-web/feat/017-model-independent-delivery",
+        "common_dir": "/mnt/f/IdeaProjects/goto-software/goto-web/.git",
+        "sha": "08f4718351ccd6505600a3b49f97b20ef1d536d4",
+        "config_sha256": "1b7159a520184ef3968d4e906abfa88d3df25d62cdae1d37a7be5a184d76f146",
+        "inputs_sha256": "2721bebb08e386a81279f2e0c2b441efce22fc72c4c274cfc6396125bb188a06",
+        "environment_sha256": "542b08d5b5be231f1a162038b071aab4a46a0443247d4fd5d0c668bb3f72ad6e"
+      },
+      "after": {
+        "root": "/mnt/f/IdeaProjects/worktrees/goto-software/goto-web/feat/017-model-independent-delivery",
+        "common_dir": "/mnt/f/IdeaProjects/goto-software/goto-web/.git",
+        "sha": "08f4718351ccd6505600a3b49f97b20ef1d536d4",
+        "config_sha256": "1b7159a520184ef3968d4e906abfa88d3df25d62cdae1d37a7be5a184d76f146",
+        "inputs_sha256": "2721bebb08e386a81279f2e0c2b441efce22fc72c4c274cfc6396125bb188a06",
+        "environment_sha256": "542b08d5b5be231f1a162038b071aab4a46a0443247d4fd5d0c668bb3f72ad6e"
+      },
+      "tool_sha256": "4c29780ffdbe7ed69e7d009226fdc32569fce84db2b1b723705ccfe96372c0d2",
+      "request_sha256": "d0120658c8dd471b9d1e2f620ef79fec2b0f494f7a40963f6416bea2aa1f7af5",
+      "change_set_ids": [
+        "CS-20261003-59747383-200e-46c6-b112-99531f61e0cd"
+      ],
+      "checks": [
+        {
+          "id": "goto-web.build",
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 66.882
+        },
+        {
+          "id": "goto-web.offline-unit",
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 38.261,
+          "cases": {
+            "goto-web.offline-unit": "passed"
+          },
+          "evidence": {}
+        }
+      ],
+      "integrated": false,
+      "pushed": false,
+      "deployed": false,
+      "run": "goto-web-current-tool-run",
+      "raw_result_path": "/tmp/delivery-g1.17VUmCiQ/goto-web-current-tool-run/result.json",
+      "raw_result_sha256": "13e567598c83eb466dff02975088591303a8808431425b93d5af9d3edc1c9536",
+      "log_hashes": {
+        "goto-web.build.log": "3bfde1a295a180efd56374f34c16585b5f476b7a817575f93374256eb8410aea",
+        "goto-web.offline-unit.log": "3b46bc58a00fb2a8e65e027b4a1573bae6878b183087a9d17c76b06429a17fc1"
+      },
+      "native_jest": {
+        "numTotalTestSuites": 2,
+        "numPassedTestSuites": 2,
+        "numFailedTestSuites": 0,
+        "numPendingTestSuites": 0,
+        "numTotalTests": 6,
+        "numPassedTests": 6,
+        "numFailedTests": 0,
+        "numPendingTests": 0
+      },
+      "native_jest_sha256": "ad9757708d452b0b805d52facd305dc3612686ec0e849c3dbc94bc2068230e36"
+    },
+    {
+      "goal": "G1 基础检查；编译不冒充单测，未证明依赖源码/制品及真实资源边界则联合验收仍阻断",
+      "passed": false,
+      "identity_error": null,
+      "before": {
+        "root": "/mnt/f/IdeaProjects/worktrees/goto-software/goto/feat/014-model-independent-delivery",
+        "common_dir": "/mnt/f/IdeaProjects/goto-software/goto/.git",
+        "sha": "8045230f656a852db3e6a1261ccf2dc4c7c9b11d",
+        "config_sha256": "322e391ad10666cab673129c053129cc66d699825c048fde3583757f208cf22a",
+        "inputs_sha256": "7fd137b21ce529cef37395e20cbe69e3f5a3bef88895993af9443cb3bac78294",
+        "environment_sha256": "e4d66aa3553e5a86fd44cafe533273b472995e1e53b1034eb07cb89872c73323"
+      },
+      "after": {
+        "root": "/mnt/f/IdeaProjects/worktrees/goto-software/goto/feat/014-model-independent-delivery",
+        "common_dir": "/mnt/f/IdeaProjects/goto-software/goto/.git",
+        "sha": "8045230f656a852db3e6a1261ccf2dc4c7c9b11d",
+        "config_sha256": "322e391ad10666cab673129c053129cc66d699825c048fde3583757f208cf22a",
+        "inputs_sha256": "7fd137b21ce529cef37395e20cbe69e3f5a3bef88895993af9443cb3bac78294",
+        "environment_sha256": "e4d66aa3553e5a86fd44cafe533273b472995e1e53b1034eb07cb89872c73323"
+      },
+      "tool_sha256": "4c29780ffdbe7ed69e7d009226fdc32569fce84db2b1b723705ccfe96372c0d2",
+      "request_sha256": "0c0c9e29737f648a4effaf8c3d8ec4f7b2db21037ed4bcf4ae47fd2e063c19fc",
+      "change_set_ids": [
+        "CS-20261003-59747383-200e-46c6-b112-99531f61e0cd"
+      ],
+      "checks": [
+        {
+          "id": "goto.contracts",
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 168.418
+        }
+      ],
+      "integrated": false,
+      "pushed": false,
+      "deployed": false,
+      "run": "goto-current-tool-run",
+      "raw_result_path": "/tmp/delivery-g1.17VUmCiQ/goto-current-tool-run/result.json",
+      "raw_result_sha256": "70afe27d028d73ecb0b4b589a0673621c745b7de76034047c82c16bd53f9704c",
+      "log_hashes": {
+        "goto-contracts.log": "839a450d221ba35b6f2f2c9e3733e24011f9db5affda3545f467eed178aecb54",
+        "goto.contracts.log": "1635023649a502b9558bf367e3f1917cf81d97b1653251e1e88b4c759ce9c97f"
+      }
+    },
+    {
+      "goal": "G1 基础检查；编译不冒充单测，未证明依赖源码/制品及真实资源边界则联合验收仍阻断",
+      "passed": true,
+      "identity_error": null,
+      "before": {
+        "root": "/mnt/f/IdeaProjects/worktrees/goto-software/rsession/feat/002-model-independent-delivery",
+        "common_dir": "/mnt/f/IdeaProjects/goto-software/rsession/.git",
+        "sha": "794a9b9d4f55f7eebf538c36027bbb73fa71d579",
+        "config_sha256": "44983048c21be82bd9722f22c34a8ba39f190f8271a96ac51ae334bfbf1d30fb",
+        "inputs_sha256": "3112ab7f45da609f184db8f20ad18a7c3f3bc3471299e3074ff6fc6304254651",
+        "environment_sha256": "f44281d30ff629b9f2045e3975b8d0a3f9e3074e2a64739ef7aa0317e65158c2"
+      },
+      "after": {
+        "root": "/mnt/f/IdeaProjects/worktrees/goto-software/rsession/feat/002-model-independent-delivery",
+        "common_dir": "/mnt/f/IdeaProjects/goto-software/rsession/.git",
+        "sha": "794a9b9d4f55f7eebf538c36027bbb73fa71d579",
+        "config_sha256": "44983048c21be82bd9722f22c34a8ba39f190f8271a96ac51ae334bfbf1d30fb",
+        "inputs_sha256": "3112ab7f45da609f184db8f20ad18a7c3f3bc3471299e3074ff6fc6304254651",
+        "environment_sha256": "f44281d30ff629b9f2045e3975b8d0a3f9e3074e2a64739ef7aa0317e65158c2"
+      },
+      "tool_sha256": "4c29780ffdbe7ed69e7d009226fdc32569fce84db2b1b723705ccfe96372c0d2",
+      "request_sha256": "9b9447e5ae4e7bfcedd6fde1a4d773ea570811ef5ab05d08db5ef99c91ef6999",
+      "change_set_ids": [
+        "CS-20261003-59747383-200e-46c6-b112-99531f61e0cd"
+      ],
+      "checks": [
+        {
+          "id": "rsession.compile-only",
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 7.237
+        }
+      ],
+      "integrated": false,
+      "pushed": false,
+      "deployed": false,
+      "run": "rsession-current-tool-run",
+      "raw_result_path": "/tmp/delivery-g1.17VUmCiQ/rsession-current-tool-run/result.json",
+      "raw_result_sha256": "9a0391d307be4a7ae08dacd29a5a04b72c88bd3d90d4c5611ca57a68af0a1380",
+      "log_hashes": {
+        "rsession.compile-only.log": "477d3cdf40d31bf4027ccc5e67772080ad5fa75d741ec7cce8f88a0c438309fa"
+      }
+    },
+    {
+      "goal": "G1 基础检查；编译不冒充单测，未证明依赖源码/制品及真实资源边界则联合验收仍阻断",
+      "passed": true,
+      "identity_error": null,
+      "before": {
+        "root": "/mnt/f/IdeaProjects/worktrees/goto-software/freedom-public/feat/008-model-independent-delivery",
+        "common_dir": "/mnt/f/IdeaProjects/goto-software/freedom-public/.git",
+        "sha": "12bf25bbb97666c1f538ec9d597fb99a61aa60e9",
+        "config_sha256": "8c5c50c41b63eda1fc379c0485a93977828e0a713275524b9ff53f66088f2054",
+        "inputs_sha256": "35346205f20a32c26ff19bdf0d2ef8033039d91076a2eddf73cafa0e2f7ba9bd",
+        "environment_sha256": "e96fdd445445ec0f2a8813429875ffe468f61a17360297ab4165bf8325cfa981"
+      },
+      "after": {
+        "root": "/mnt/f/IdeaProjects/worktrees/goto-software/freedom-public/feat/008-model-independent-delivery",
+        "common_dir": "/mnt/f/IdeaProjects/goto-software/freedom-public/.git",
+        "sha": "12bf25bbb97666c1f538ec9d597fb99a61aa60e9",
+        "config_sha256": "8c5c50c41b63eda1fc379c0485a93977828e0a713275524b9ff53f66088f2054",
+        "inputs_sha256": "35346205f20a32c26ff19bdf0d2ef8033039d91076a2eddf73cafa0e2f7ba9bd",
+        "environment_sha256": "e96fdd445445ec0f2a8813429875ffe468f61a17360297ab4165bf8325cfa981"
+      },
+      "tool_sha256": "4c29780ffdbe7ed69e7d009226fdc32569fce84db2b1b723705ccfe96372c0d2",
+      "request_sha256": "85ba2e7e9a8337bc6489db278403e38a5f2a2221a67ed9880c264100bd842e13",
+      "change_set_ids": [
+        "CS-20261003-59747383-200e-46c6-b112-99531f61e0cd"
+      ],
+      "checks": [
+        {
+          "id": "freedom.compile-only",
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 80.038
+        }
+      ],
+      "integrated": false,
+      "pushed": false,
+      "deployed": false,
+      "run": "freedom-current-tool-run",
+      "raw_result_path": "/tmp/delivery-g1.17VUmCiQ/freedom-current-tool-run/result.json",
+      "raw_result_sha256": "7f48346de9a9aec0f5f57c3d13051a509cc47fa837178415118a35ead832fbac",
+      "log_hashes": {
+        "freedom.compile-only.log": "3d7651ac26d36fcfada7fc5f4ba64fec1947c8d7610c0019e3b79fa02f8c2280"
+      }
+    }
+  ]
+}
