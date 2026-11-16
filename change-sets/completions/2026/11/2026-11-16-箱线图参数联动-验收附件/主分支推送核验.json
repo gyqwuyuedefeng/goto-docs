@@ -1,0 +1,19 @@
+{
+  "change_set_id": "CS-20261116-dd2157bc-de32-4217-9928-630a2f384f12",
+  "verified_at": "2026-11-16T22:11:44+08:00",
+  "repositories": {
+    "goto-web": {
+      "HEAD": "90e4a7c8508a3809e5e948111458fbca9a9e8ef5",
+      "master": "90e4a7c8508a3809e5e948111458fbca9a9e8ef5",
+      "origin/master": "90e4a7c8508a3809e5e948111458fbca9a9e8ef5",
+      "ls_remote_verified_sha": "90e4a7c8508a3809e5e948111458fbca9a9e8ef5"
+    },
+    "goto": {
+      "HEAD": "44cccee70b3c10d47e65afb0f628d7b517b06270",
+      "master": "44cccee70b3c10d47e65afb0f628d7b517b06270",
+      "origin/master": "44cccee70b3c10d47e65afb0f628d7b517b06270",
+      "ls_remote_verified_sha": "44cccee70b3c10d47e65afb0f628d7b517b06270"
+    }
+  },
+  "deployment_performed": false
+}

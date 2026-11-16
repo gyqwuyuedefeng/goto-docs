@@ -1,0 +1,306 @@
+{
+  "change_set_id": "CS-20261116-dd2157bc-de32-4217-9928-630a2f384f12",
+  "frontend_suites": [
+    {
+      "suite": "boxViolinBehavior, sankeyFirstLoadBinding, plotSidePanelSankey, sankeyNodeGeneration",
+      "passed": 63,
+      "exit_code": 0
+    },
+    {
+      "suite": "plotDrawStartValidation",
+      "passed": 20,
+      "exit_code": 0
+    },
+    {
+      "suite": "associationRegistry.contract",
+      "passed": 8,
+      "exit_code": 0
+    }
+  ],
+  "build_exit_code": 0,
+  "build_warnings": 4,
+  "eslint_registry_exit_code": 0,
+  "commits": {
+    "frontend": {
+      "commit": "90e4a7c8508a3809e5e948111458fbca9a9e8ef5",
+      "target": "54b6d1551cf3fd02a27426dfd106a2c88bfb01ec",
+      "remote": "54b6d1551cf3fd02a27426dfd106a2c88bfb01ec"
+    },
+    "backend": {
+      "commit": "44cccee70b3c10d47e65afb0f628d7b517b06270",
+      "target": "8589d7c0cca264ae357b04de040389a166adcab3",
+      "remote": "8589d7c0cca264ae357b04de040389a166adcab3"
+    }
+  },
+  "eslint": {
+    "files": 9,
+    "exit_code": 0
+  },
+  "java": {
+    "common": {
+      "tests": 133,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "system": {
+      "tests": 254,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "task": {
+      "tests": 193,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 13
+    }
+  },
+  "box": {
+    "passed": true,
+    "reuseExistingServer": false,
+    "base": "http://127.0.0.1:42048",
+    "system": "http://127.0.0.1:51371",
+    "checks": [
+      {
+        "name": "violin主图严格匹配Tab表格及开关"
+      },
+      {
+        "name": "box主图严格匹配Tab表格及开关"
+      },
+      {
+        "name": "bar主图严格匹配Tab表格及开关"
+      },
+      {
+        "name": "raincloud主图严格匹配Tab表格及开关"
+      },
+      {
+        "name": "关闭显著性仅显示开关"
+      },
+      {
+        "name": "多组非配对全局检验允许6至8",
+        "allowed": [
+          "ANOVA_Welch",
+          "ANOVA_Classic",
+          "KruskalWallis"
+        ],
+        "selected": "ANOVA_Welch"
+      },
+      {
+        "name": "ANOVA_Welch事后检验对应关系"
+      },
+      {
+        "name": "ANOVA_Classic事后检验对应关系"
+      },
+      {
+        "name": "KruskalWallis事后检验对应关系"
+      },
+      {
+        "name": "多组配对全局检验允许9至10",
+        "allowed": [
+          "ANOVA_RM",
+          "Friedman"
+        ],
+        "selected": "ANOVA_RM"
+      },
+      {
+        "name": "ANOVA_RM事后检验对应关系"
+      },
+      {
+        "name": "Friedman事后检验对应关系"
+      },
+      {
+        "name": "多组配对多重比较允许4至5",
+        "allowed": [
+          "Ttest_Paired",
+          "Wilcoxon_Paired"
+        ],
+        "selected": "Ttest_Paired"
+      },
+      {
+        "name": "多组非配对多重比较允许1至3",
+        "allowed": [
+          "Ttest_Welch",
+          "Ttest_Student",
+          "Wilcoxon_Independent"
+        ],
+        "selected": "Ttest_Welch"
+      },
+      {
+        "name": "嵌套分组禁用云雨并回退，显示比较层级"
+      },
+      {
+        "name": "比较层级切回时复用检测缓存"
+      },
+      {
+        "name": "class_col与value_col均进入实际columnName选项"
+      },
+      {
+        "name": "两组非配对允许1至3",
+        "allowed": [
+          "Ttest_Welch",
+          "Ttest_Student",
+          "Wilcoxon_Independent"
+        ],
+        "selected": "Ttest_Welch"
+      },
+      {
+        "name": "两组配对允许4至5",
+        "allowed": [
+          "Ttest_Paired",
+          "Wilcoxon_Paired"
+        ],
+        "selected": "Ttest_Paired"
+      },
+      {
+        "name": "保存刷新后配对与统计选项恢复",
+        "allowed": [
+          "Ttest_Paired",
+          "Wilcoxon_Paired"
+        ],
+        "selected": "Ttest_Paired"
+      }
+    ],
+    "detections": [
+      {
+        "status": 200,
+        "code": 200,
+        "paired": false,
+        "group_type": "multi",
+        "value_col": "Value",
+        "class_col": "Group"
+      },
+      {
+        "status": 200,
+        "code": 200,
+        "paired": true,
+        "group_type": "multi",
+        "value_col": "Value",
+        "class_col": "Group"
+      },
+      {
+        "status": 200,
+        "code": 200,
+        "paired": false,
+        "group_type": "multi",
+        "value_col": "Value",
+        "class_col": "Group"
+      },
+      {
+        "status": 200,
+        "code": 200,
+        "paired": false,
+        "group_type": "multi",
+        "value_col": "Value",
+        "class_col": "Group"
+      },
+      {
+        "status": 200,
+        "code": 200,
+        "paired": false,
+        "group_type": "two",
+        "value_col": "Value",
+        "class_col": "Group"
+      },
+      {
+        "status": 200,
+        "code": 200,
+        "paired": false,
+        "group_type": "two",
+        "value_col": "Value",
+        "class_col": "Group"
+      },
+      {
+        "status": 200,
+        "code": 200,
+        "paired": false,
+        "group_type": "two",
+        "value_col": "Value",
+        "class_col": "Group"
+      },
+      {
+        "status": 200,
+        "code": 200,
+        "paired": true,
+        "group_type": "two",
+        "value_col": "Value",
+        "class_col": "Group"
+      },
+      {
+        "status": 200,
+        "code": 200,
+        "paired": true,
+        "group_type": "two",
+        "value_col": "Value",
+        "class_col": "Group"
+      }
+    ],
+    "cleanup": [
+      {
+        "id": "380720460465176576",
+        "cleaned": true
+      }
+    ],
+    "created": [
+      {
+        "id": "380720460465176576",
+        "tmpFolderName": "e89306e679a046b389036b16f8a0bbcd"
+      }
+    ],
+    "requestCount": 9
+  },
+  "network": {
+    "baseURL": "http://127.0.0.1:42048",
+    "systemURL": "http://127.0.0.1:51371",
+    "reuseExistingServer": false,
+    "passed": true,
+    "created": [
+      {
+        "id": "380720735691210752",
+        "tmpFolderName": "996ecdfeddad4858a1f590b857bec266"
+      }
+    ],
+    "checks": [
+      "weighted_nodes",
+      "reload_persistence",
+      "unweighted_nodes"
+    ],
+    "cleanup": true
+  },
+  "shutdown": {
+    "ports": {
+      "web": {
+        "port": 42048,
+        "released": true
+      },
+      "system": {
+        "port": 51371,
+        "released": true
+      },
+      "task": {
+        "port": 56984,
+        "released": true
+      }
+    },
+    "windows_task_java_processes": 0,
+    "login_restored": true
+  },
+  "cleanup": [
+    {
+      "suite": "box",
+      "id": "380720460465176576",
+      "tmpFolderName": "e89306e679a046b389036b16f8a0bbcd",
+      "api_deleted": true,
+      "moved_out_of_business_root": true,
+      "business_directory_absent": true
+    },
+    {
+      "suite": "network",
+      "id": "380720735691210752",
+      "tmpFolderName": "996ecdfeddad4858a1f590b857bec266",
+      "api_deleted": true,
+      "moved_out_of_business_root": true,
+      "business_directory_absent": true
+    }
+  ]
+}

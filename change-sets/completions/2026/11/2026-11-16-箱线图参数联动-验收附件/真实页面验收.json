@@ -1,0 +1,194 @@
+{
+  "change_set_id": "CS-20261116-dd2157bc-de32-4217-9928-630a2f384f12",
+  "passed": true,
+  "reuseExistingServer": false,
+  "base": "http://127.0.0.1:41794",
+  "system": "http://127.0.0.1:49976",
+  "checks": [
+    {
+      "name": "violin主图严格匹配Tab表格及开关"
+    },
+    {
+      "name": "box主图严格匹配Tab表格及开关"
+    },
+    {
+      "name": "bar主图严格匹配Tab表格及开关"
+    },
+    {
+      "name": "raincloud主图严格匹配Tab表格及开关"
+    },
+    {
+      "name": "关闭显著性仅显示开关"
+    },
+    {
+      "name": "多组非配对全局检验允许6至8",
+      "allowed": [
+        "ANOVA_Welch",
+        "ANOVA_Classic",
+        "KruskalWallis"
+      ],
+      "selected": "ANOVA_Welch"
+    },
+    {
+      "name": "ANOVA_Welch事后检验对应关系"
+    },
+    {
+      "name": "ANOVA_Classic事后检验对应关系"
+    },
+    {
+      "name": "KruskalWallis事后检验对应关系"
+    },
+    {
+      "name": "多组配对全局检验允许9至10",
+      "allowed": [
+        "ANOVA_RM",
+        "Friedman"
+      ],
+      "selected": "ANOVA_RM"
+    },
+    {
+      "name": "ANOVA_RM事后检验对应关系"
+    },
+    {
+      "name": "Friedman事后检验对应关系"
+    },
+    {
+      "name": "多组配对多重比较允许4至5",
+      "allowed": [
+        "Ttest_Paired",
+        "Wilcoxon_Paired"
+      ],
+      "selected": "Ttest_Paired"
+    },
+    {
+      "name": "多组非配对多重比较允许1至3",
+      "allowed": [
+        "Ttest_Welch",
+        "Ttest_Student",
+        "Wilcoxon_Independent"
+      ],
+      "selected": "Ttest_Welch"
+    },
+    {
+      "name": "嵌套分组禁用云雨并回退，显示比较层级"
+    },
+    {
+      "name": "比较层级切回时复用检测缓存"
+    },
+    {
+      "name": "class_col与value_col均进入实际columnName选项"
+    },
+    {
+      "name": "两组非配对允许1至3",
+      "allowed": [
+        "Ttest_Welch",
+        "Ttest_Student",
+        "Wilcoxon_Independent"
+      ],
+      "selected": "Ttest_Welch"
+    },
+    {
+      "name": "两组配对允许4至5",
+      "allowed": [
+        "Ttest_Paired",
+        "Wilcoxon_Paired"
+      ],
+      "selected": "Ttest_Paired"
+    },
+    {
+      "name": "保存刷新后配对与统计选项恢复",
+      "allowed": [
+        "Ttest_Paired",
+        "Wilcoxon_Paired"
+      ],
+      "selected": "Ttest_Paired"
+    }
+  ],
+  "detections": [
+    {
+      "status": 200,
+      "code": 200,
+      "paired": false,
+      "class_col": "Group",
+      "value_col": "Value",
+      "group_type": "multi"
+    },
+    {
+      "status": 200,
+      "code": 200,
+      "paired": true,
+      "class_col": "Group",
+      "value_col": "Value",
+      "group_type": "multi"
+    },
+    {
+      "status": 200,
+      "code": 200,
+      "paired": false,
+      "class_col": "Group",
+      "value_col": "Value",
+      "group_type": "multi"
+    },
+    {
+      "status": 200,
+      "code": 200,
+      "paired": false,
+      "class_col": "Group",
+      "value_col": "Value",
+      "group_type": "multi"
+    },
+    {
+      "status": 200,
+      "code": 200,
+      "paired": false,
+      "class_col": "Group",
+      "value_col": "Value",
+      "group_type": "two"
+    },
+    {
+      "status": 200,
+      "code": 200,
+      "paired": false,
+      "class_col": "Group",
+      "value_col": "Value",
+      "group_type": "two"
+    },
+    {
+      "status": 200,
+      "code": 200,
+      "paired": false,
+      "class_col": "Group",
+      "value_col": "Value",
+      "group_type": "two"
+    },
+    {
+      "status": 200,
+      "code": 200,
+      "paired": true,
+      "class_col": "Group",
+      "value_col": "Value",
+      "group_type": "two"
+    },
+    {
+      "status": 200,
+      "code": 200,
+      "paired": true,
+      "class_col": "Group",
+      "value_col": "Value",
+      "group_type": "two"
+    }
+  ],
+  "cleanup": [
+    {
+      "id": "380715646750556160",
+      "cleaned": true
+    }
+  ],
+  "created": [
+    {
+      "id": "380715646750556160",
+      "tmpFolderName": "4eb49dbaa0574809bcc1c1cbf11a334f"
+    }
+  ],
+  "requestCount": 9
+}
