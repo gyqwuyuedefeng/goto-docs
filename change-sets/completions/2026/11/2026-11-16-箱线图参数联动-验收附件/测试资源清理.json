@@ -1,0 +1,45 @@
+{
+  "change_set_id": "CS-20261116-dd2157bc-de32-4217-9928-630a2f384f12",
+  "records": [
+    {
+      "id": "380714607481716736",
+      "folder": "2f23e416c27941598592674fcbb6f269",
+      "apiCleaned": true,
+      "folderExists": true,
+      "businessFolderRemoved": true,
+      "runtimeFilesRetainedInTmp": true
+    },
+    {
+      "id": "380714846603182080",
+      "folder": "c1e4dc76fb894835bad98e0d1de64d05",
+      "apiCleaned": true,
+      "folderExists": true,
+      "businessFolderRemoved": true,
+      "runtimeFilesRetainedInTmp": true
+    },
+    {
+      "id": "380715095526735872",
+      "folder": "efa4fd4304324f9aaae95f1f6c5c0cb5",
+      "apiCleaned": true,
+      "folderExists": true,
+      "businessFolderRemoved": true,
+      "runtimeFilesRetainedInTmp": true
+    },
+    {
+      "id": "380715283800653824",
+      "folder": "1ad43cc0e8b747ec88184497ba348a42",
+      "apiCleaned": true,
+      "folderExists": true,
+      "businessFolderRemoved": true,
+      "runtimeFilesRetainedInTmp": true
+    },
+    {
+      "id": "380715646750556160",
+      "folder": "4eb49dbaa0574809bcc1c1cbf11a334f",
+      "apiCleaned": true,
+      "folderExists": true,
+      "businessFolderRemoved": true,
+      "runtimeFilesRetainedInTmp": true
+    }
+  ]
+}
