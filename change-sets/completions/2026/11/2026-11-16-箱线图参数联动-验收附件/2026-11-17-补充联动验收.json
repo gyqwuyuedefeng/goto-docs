@@ -1,0 +1,434 @@
+{
+  "change_set_id": "CS-20261116-dd2157bc-de32-4217-9928-630a2f384f12",
+  "initial_baseline": {
+    "repo": "goto-web",
+    "remote": "origin",
+    "base": "master",
+    "remote_sha": "54df453e8bff9ea246d33fced0d718ee1fa3d317",
+    "start_sha": "54df453e8bff9ea246d33fced0d718ee1fa3d317",
+    "branch": "fix/038-箱线图叠加与校正联动",
+    "worktree": "/mnt/f/IdeaProjects/goto-software/worktrees/goto-web/fix/038-箱线图叠加与校正联动",
+    "fetched_at": "2026-11-17T11:28:45.743880+08:00",
+    "change_set_id": "CS-20261116-dd2157bc-de32-4217-9928-630a2f384f12"
+  },
+  "tested_frontend_commit": "333a73d686a65a4d69f051c8f3c7333401e0a8ad",
+  "target_before": "a7d85098345b52fdff93c9e6e1d73e9a2df2141e",
+  "frontend_tests": {
+    "suites": 4,
+    "passed": 98,
+    "failures": 0
+  },
+  "eslint": {
+    "files": 3,
+    "exit_code": 0
+  },
+  "production_build": {
+    "exit_code": 0,
+    "warnings": 4,
+    "login_original_restored_before_build": true
+  },
+  "backend": {
+    "backend_commit": "44cccee70b3c10d47e65afb0f628d7b517b06270",
+    "artifact_source": "/home/gyq/.cache/codex-maven-repositories/5c15b51ca18f15a38b66e1e8/repository/com/freedom/goto-system/1.0/goto-system-1.0.jar",
+    "runtime_jar": "/tmp/box-followup-40rhpfwq/goto-manager-verified.jar",
+    "sha256": "fd7123715c8300668d361b212a19e67808bc2e247dc9d0c644fe81ffa876079b",
+    "previous_build_log": "/tmp/box-publish-4av15c18/backend-clean-install.log",
+    "main_target_jar_reused": false
+  },
+  "box": {
+    "passed": true,
+    "reuseExistingServer": false,
+    "base": "http://127.0.0.1:40572",
+    "system": "http://127.0.0.1:63947",
+    "checks": [
+      {
+        "name": "violin主图严格匹配Tab表格及开关"
+      },
+      {
+        "name": "box主图严格匹配Tab表格及开关"
+      },
+      {
+        "name": "bar主图严格匹配Tab表格及开关"
+      },
+      {
+        "name": "raincloud主图严格匹配Tab表格及开关"
+      },
+      {
+        "name": "addBox=TRUE同步视觉Tab"
+      },
+      {
+        "name": "addPoint=TRUE同步视觉Tab"
+      },
+      {
+        "name": "addBox=FALSE同步视觉Tab"
+      },
+      {
+        "name": "addPoint=FALSE同步视觉Tab"
+      },
+      {
+        "name": "box叠加散点可打开及关闭Tab"
+      },
+      {
+        "name": "bar叠加散点可打开及关闭Tab"
+      },
+      {
+        "name": "关闭显著性仅显示开关"
+      },
+      {
+        "name": "多组非配对全局检验允许6至8",
+        "allowed": [
+          "ANOVA_Welch",
+          "ANOVA_Classic",
+          "KruskalWallis"
+        ],
+        "selected": "ANOVA_Welch"
+      },
+      {
+        "name": "ANOVA_Welch事后检验对应关系"
+      },
+      {
+        "name": "ANOVA_Classic事后检验对应关系"
+      },
+      {
+        "name": "两两t检验显示校正，切回Tukey隐藏"
+      },
+      {
+        "name": "KruskalWallis事后检验对应关系"
+      },
+      {
+        "name": "多组配对全局检验允许9至10",
+        "allowed": [
+          "ANOVA_RM",
+          "Friedman"
+        ],
+        "selected": "ANOVA_RM"
+      },
+      {
+        "name": "ANOVA_RM事后检验对应关系"
+      },
+      {
+        "name": "PairwisePairedT显示校正，切回非逐对检验隐藏"
+      },
+      {
+        "name": "Friedman事后检验对应关系"
+      },
+      {
+        "name": "PairwisePairedW显示校正，切回非逐对检验隐藏"
+      },
+      {
+        "name": "多组配对多重比较允许4至5",
+        "allowed": [
+          "Ttest_Paired",
+          "Wilcoxon_Paired"
+        ],
+        "selected": "Ttest_Paired"
+      },
+      {
+        "name": "多组非配对多重比较允许1至3",
+        "allowed": [
+          "Ttest_Welch",
+          "Ttest_Student",
+          "Wilcoxon_Independent"
+        ],
+        "selected": "Ttest_Welch"
+      },
+      {
+        "name": "嵌套分组禁用云雨并回退，显示比较层级"
+      },
+      {
+        "name": "比较层级切回时复用检测缓存"
+      },
+      {
+        "name": "class_col与value_col均进入实际columnName选项"
+      },
+      {
+        "name": "两组非配对允许1至3",
+        "allowed": [
+          "Ttest_Welch",
+          "Ttest_Student",
+          "Wilcoxon_Independent"
+        ],
+        "selected": "Ttest_Welch"
+      },
+      {
+        "name": "两组配对允许4至5",
+        "allowed": [
+          "Ttest_Paired",
+          "Wilcoxon_Paired"
+        ],
+        "selected": "Ttest_Paired"
+      },
+      {
+        "name": "保存刷新后叠加散点及视觉Tab恢复"
+      },
+      {
+        "name": "保存刷新后配对与统计选项恢复",
+        "allowed": [
+          "Ttest_Paired",
+          "Wilcoxon_Paired"
+        ],
+        "selected": "Ttest_Paired"
+      }
+    ],
+    "detections": [
+      {
+        "status": 200,
+        "code": 200,
+        "class_col": "Group",
+        "value_col": "Value",
+        "group_type": "multi",
+        "paired": false
+      },
+      {
+        "status": 200,
+        "code": 200,
+        "class_col": "Group",
+        "value_col": "Value",
+        "group_type": "multi",
+        "paired": true
+      },
+      {
+        "status": 200,
+        "code": 200,
+        "class_col": "Group",
+        "value_col": "Value",
+        "group_type": "multi",
+        "paired": false
+      },
+      {
+        "status": 200,
+        "code": 200,
+        "class_col": "Group",
+        "value_col": "Value",
+        "group_type": "multi",
+        "paired": false
+      },
+      {
+        "status": 200,
+        "code": 200,
+        "class_col": "Group",
+        "value_col": "Value",
+        "group_type": "two",
+        "paired": false
+      },
+      {
+        "status": 200,
+        "code": 200,
+        "class_col": "Group",
+        "value_col": "Value",
+        "group_type": "two",
+        "paired": false
+      },
+      {
+        "status": 200,
+        "code": 200,
+        "class_col": "Group",
+        "value_col": "Value",
+        "group_type": "two",
+        "paired": false
+      },
+      {
+        "status": 200,
+        "code": 200,
+        "class_col": "Group",
+        "value_col": "Value",
+        "group_type": "two",
+        "paired": true
+      },
+      {
+        "status": 200,
+        "code": 200,
+        "class_col": "Group",
+        "value_col": "Value",
+        "group_type": "two",
+        "paired": true
+      }
+    ],
+    "cleanup": [
+      {
+        "id": "380926266737426432",
+        "cleaned": true
+      }
+    ],
+    "created": [
+      {
+        "id": "380926266737426432",
+        "tmpFolderName": "3b5f1bd02b5a4ef9864e062e96e9ee33"
+      }
+    ],
+    "requestCount": 9
+  },
+  "upload": {
+    "passed": true,
+    "reuseExistingServer": false,
+    "baseURL": "http://127.0.0.1:40572",
+    "systemURL": "http://127.0.0.1:63947",
+    "checks": [
+      {
+        "name": "数值列类型一致保留自定义渐变",
+        "type": 2,
+        "by": "direction",
+        "values": [
+          {
+            "name": "low",
+            "value": "#123456"
+          },
+          {
+            "name": "high",
+            "value": "#ff6767"
+          }
+        ]
+      },
+      {
+        "name": "连续变离散恢复默认配色",
+        "type": 1,
+        "by": "direction",
+        "values": [
+          {
+            "name": "Positive",
+            "value": "#937DC2"
+          },
+          {
+            "name": "Negative",
+            "value": "#7ED4AD"
+          }
+        ]
+      },
+      {
+        "name": "离散列类型一致保留自定义配色",
+        "type": 1,
+        "by": "direction",
+        "values": [
+          {
+            "name": "Positive",
+            "value": "#654321"
+          },
+          {
+            "name": "Negative",
+            "value": "#7ED4AD"
+          }
+        ]
+      },
+      {
+        "name": "离散变数值恢复默认渐变",
+        "type": 2,
+        "by": "direction",
+        "values": [
+          {
+            "name": "low",
+            "value": "#f2dbdb"
+          },
+          {
+            "name": "high",
+            "value": "#ff6767"
+          }
+        ]
+      },
+      {
+        "name": "上传后允许用户主动选择离散映射并提示警告",
+        "type": 1,
+        "by": "direction",
+        "values": [
+          {
+            "name": 1.1,
+            "value": "#345678"
+          },
+          {
+            "name": 1.6,
+            "value": "#7ED4AD"
+          }
+        ]
+      },
+      {
+        "name": "旧离散映射重新上传数值列优先使用默认连续渐变",
+        "type": 2,
+        "by": "direction",
+        "values": [
+          {
+            "name": "low",
+            "value": "#f2dbdb"
+          },
+          {
+            "name": "high",
+            "value": "#ff6767"
+          }
+        ]
+      },
+      {
+        "name": "数值列原为离散映射仍按原始列类型判断重置",
+        "type": 1,
+        "by": "direction",
+        "values": [
+          {
+            "name": "Positive",
+            "value": "#937DC2"
+          },
+          {
+            "name": "Negative",
+            "value": "#7ED4AD"
+          }
+        ]
+      }
+    ],
+    "cleanup": [
+      {
+        "id": "380926598532038656",
+        "cleaned": true
+      }
+    ],
+    "createdRecords": [
+      {
+        "id": "380926598532038656",
+        "tmpFolderName": "c626048660504e64b46dce1c9649c798"
+      }
+    ]
+  },
+  "shutdown": {
+    "ports": {
+      "web": {
+        "port": 40572,
+        "released": true
+      },
+      "system": {
+        "port": 63947,
+        "released": true
+      }
+    },
+    "owned_windows_java_processes": 0,
+    "login_restored": true
+  },
+  "cleanup": [
+    {
+      "suite": "box",
+      "id": "380926266737426432",
+      "tmpFolderName": "3b5f1bd02b5a4ef9864e062e96e9ee33",
+      "api_deleted": true,
+      "business_directory_absent": true
+    },
+    {
+      "suite": "upload",
+      "id": "380926598532038656",
+      "tmpFolderName": "c626048660504e64b46dce1c9649c798",
+      "api_deleted": true,
+      "business_directory_absent": true
+    }
+  ],
+  "earlier_cleanup": [
+    {
+      "attempt": "box-attempt-1",
+      "id": "380924225654882304",
+      "tmpFolderName": "e7cacbe30cc047f4b2bd67142736a6a0",
+      "api_deleted": true,
+      "business_directory_absent": true
+    },
+    {
+      "attempt": "box",
+      "id": "380924471831166976",
+      "tmpFolderName": "09e78be3175449d3af49e3dd572fe96a",
+      "api_deleted": true,
+      "business_directory_absent": true
+    }
+  ],
+  "remote_verified_sha": "333a73d686a65a4d69f051c8f3c7333401e0a8ad",
+  "verified_at": "2026-11-17T11:50:29+08:00"
+}
