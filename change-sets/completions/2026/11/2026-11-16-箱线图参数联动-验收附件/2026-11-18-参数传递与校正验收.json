@@ -1,0 +1,594 @@
+{
+  "change_set_id": "CS-20261116-dd2157bc-de32-4217-9928-630a2f384f12",
+  "related_change_set_ids": [],
+  "verified_at": "2026-11-18T15:13:56.603856+08:00",
+  "code": [
+    {
+      "repo": "goto-web",
+      "head": "a8fec9454eb81de3c1706eeafdb805507d84ef77",
+      "tracking": "a8fec9454eb81de3c1706eeafdb805507d84ef77",
+      "remote": "a8fec9454eb81de3c1706eeafdb805507d84ef77"
+    },
+    {
+      "repo": "goto",
+      "head": "8f15261ec25ec75e7a7c840e2e567d93b591be04",
+      "tracking": "8f15261ec25ec75e7a7c840e2e567d93b591be04",
+      "remote": "8f15261ec25ec75e7a7c840e2e567d93b591be04"
+    }
+  ],
+  "base": [
+    {
+      "repo": "goto-web",
+      "branch": "fix/039-箱线图R参数补齐",
+      "worktree": "/mnt/f/IdeaProjects/goto-software/worktrees/goto-web/fix/039-箱线图R参数补齐",
+      "remote": "origin",
+      "base": "master",
+      "remote_sha": "333a73d686a65a4d69f051c8f3c7333401e0a8ad",
+      "start_sha": "333a73d686a65a4d69f051c8f3c7333401e0a8ad",
+      "fetched_at": "2026-11-18T14:03:33.571514+08:00"
+    },
+    {
+      "repo": "goto",
+      "branch": "fix/027-箱线图R参数补齐",
+      "worktree": "/mnt/f/IdeaProjects/goto-software/worktrees/goto/fix/027-箱线图R参数补齐",
+      "remote": "origin",
+      "base": "master",
+      "remote_sha": "20ab5aa196374593d62ef3a2c229ab5ec5fd99ff",
+      "start_sha": "20ab5aa196374593d62ef3a2c229ab5ec5fd99ff",
+      "fetched_at": "2026-11-18T14:03:44.448253+08:00"
+    }
+  ],
+  "frontend_unit_tests": 110,
+  "java": [
+    {
+      "module": "common",
+      "tests": 136,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "system",
+      "tests": 254,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "task",
+      "tests": 194,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 13
+    }
+  ],
+  "box": {
+    "passed": true,
+    "reuseExistingServer": false,
+    "base": "http://127.0.0.1:41552",
+    "system": "http://127.0.0.1:54038",
+    "checks": [
+      {
+        "name": "violin主图严格匹配Tab表格及开关"
+      },
+      {
+        "name": "box主图严格匹配Tab表格及开关"
+      },
+      {
+        "name": "bar主图严格匹配Tab表格及开关"
+      },
+      {
+        "name": "raincloud主图严格匹配Tab表格及开关"
+      },
+      {
+        "name": "addBox=TRUE同步视觉Tab"
+      },
+      {
+        "name": "addPoint=TRUE同步视觉Tab"
+      },
+      {
+        "name": "addBox=FALSE同步视觉Tab"
+      },
+      {
+        "name": "addPoint=FALSE同步视觉Tab"
+      },
+      {
+        "name": "box叠加散点可打开及关闭Tab"
+      },
+      {
+        "name": "bar叠加散点可打开及关闭Tab"
+      },
+      {
+        "name": "关闭显著性仅显示开关"
+      },
+      {
+        "name": "多组非配对全局检验允许6至8",
+        "allowed": [
+          "ANOVA_Welch",
+          "ANOVA_Classic",
+          "KruskalWallis"
+        ],
+        "selected": "ANOVA_Welch"
+      },
+      {
+        "name": "ANOVA_Welch事后检验对应关系"
+      },
+      {
+        "name": "ANOVA_Classic事后检验对应关系"
+      },
+      {
+        "name": "两两t检验显示校正，切回Tukey隐藏"
+      },
+      {
+        "name": "KruskalWallis事后检验对应关系"
+      },
+      {
+        "name": "多组配对全局检验允许9至10",
+        "allowed": [
+          "ANOVA_RM",
+          "Friedman"
+        ],
+        "selected": "ANOVA_RM"
+      },
+      {
+        "name": "ANOVA_RM事后检验对应关系"
+      },
+      {
+        "name": "PairwisePairedT显示校正，切回非逐对检验隐藏"
+      },
+      {
+        "name": "Friedman事后检验对应关系"
+      },
+      {
+        "name": "PairwisePairedW显示校正，切回非逐对检验隐藏"
+      },
+      {
+        "name": "多组配对多重比较允许4至5",
+        "allowed": [
+          "Ttest_Paired",
+          "Wilcoxon_Paired"
+        ],
+        "selected": "Ttest_Paired"
+      },
+      {
+        "name": "切回多重比较并校正恢复完整五项字典"
+      },
+      {
+        "name": "多组非配对多重比较允许1至3",
+        "allowed": [
+          "Ttest_Welch",
+          "Ttest_Student",
+          "Wilcoxon_Independent"
+        ],
+        "selected": "Ttest_Welch"
+      },
+      {
+        "name": "嵌套分组禁用云雨并回退，显示比较层级"
+      },
+      {
+        "name": "比较层级切回时复用检测缓存"
+      },
+      {
+        "name": "当前比较层级三个检测值进入可序列化dataset",
+        "metadata": {
+          "class_col": "Group",
+          "value_col": "Value",
+          "group_type": "two"
+        }
+      },
+      {
+        "name": "class_col与value_col均进入实际columnName选项"
+      },
+      {
+        "name": "两组非配对允许1至3",
+        "allowed": [
+          "Ttest_Welch",
+          "Ttest_Student",
+          "Wilcoxon_Independent"
+        ],
+        "selected": "Ttest_Welch"
+      },
+      {
+        "name": "两组配对允许4至5",
+        "allowed": [
+          "Ttest_Paired",
+          "Wilcoxon_Paired"
+        ],
+        "selected": "Ttest_Paired"
+      },
+      {
+        "name": "保存刷新后叠加散点及视觉Tab恢复"
+      },
+      {
+        "name": "保存刷新后配对与统计选项恢复",
+        "allowed": [
+          "Ttest_Paired",
+          "Wilcoxon_Paired"
+        ],
+        "selected": "Ttest_Paired"
+      },
+      {
+        "name": "本次task实际R命令：禁用箱线传FALSE，散点传TRUE，columnName包含三个检测值",
+        "metadata": {
+          "class_col": "Group",
+          "value_col": "Value",
+          "group_type": "two"
+        }
+      },
+      {
+        "name": "真实绘图成功且完成状态经WebSocket返回"
+      }
+    ],
+    "detections": [
+      {
+        "status": 200,
+        "code": 200,
+        "group_type": "multi",
+        "paired": false,
+        "class_col": "Group",
+        "value_col": "Value"
+      },
+      {
+        "status": 200,
+        "code": 200,
+        "group_type": "multi",
+        "paired": true,
+        "class_col": "Group",
+        "value_col": "Value"
+      },
+      {
+        "status": 200,
+        "code": 200,
+        "group_type": "multi",
+        "paired": false,
+        "class_col": "Group",
+        "value_col": "Value"
+      },
+      {
+        "status": 200,
+        "code": 200,
+        "group_type": "multi",
+        "paired": false,
+        "class_col": "Group",
+        "value_col": "Value"
+      },
+      {
+        "status": 200,
+        "code": 200,
+        "group_type": "two",
+        "paired": false,
+        "class_col": "Group",
+        "value_col": "Value"
+      },
+      {
+        "status": 200,
+        "code": 200,
+        "group_type": "two",
+        "paired": false,
+        "class_col": "Group",
+        "value_col": "Value"
+      },
+      {
+        "status": 200,
+        "code": 200,
+        "group_type": "two",
+        "paired": false,
+        "class_col": "Group",
+        "value_col": "Value"
+      },
+      {
+        "status": 200,
+        "code": 200,
+        "group_type": "two",
+        "paired": true,
+        "class_col": "Group",
+        "value_col": "Value"
+      },
+      {
+        "status": 200,
+        "code": 200,
+        "group_type": "two",
+        "paired": true,
+        "class_col": "Group",
+        "value_col": "Value"
+      }
+    ],
+    "cleanup": [
+      {
+        "id": "381338618091798528",
+        "cleaned": true
+      }
+    ],
+    "created": [
+      {
+        "id": "381338618091798528",
+        "tmpFolderName": "694db77b4e8b40a19ede53f24235a44f"
+      }
+    ],
+    "requestCount": 9
+  },
+  "upload": {
+    "passed": true,
+    "reuseExistingServer": false,
+    "baseURL": "http://127.0.0.1:41552",
+    "systemURL": "http://127.0.0.1:54038",
+    "checks": [
+      {
+        "name": "数值列类型一致保留自定义渐变",
+        "type": 2,
+        "by": "direction",
+        "values": [
+          {
+            "name": "low",
+            "value": "#123456"
+          },
+          {
+            "name": "high",
+            "value": "#ff6767"
+          }
+        ]
+      },
+      {
+        "name": "连续变离散恢复默认配色",
+        "type": 1,
+        "by": "direction",
+        "values": [
+          {
+            "name": "Positive",
+            "value": "#937DC2"
+          },
+          {
+            "name": "Negative",
+            "value": "#7ED4AD"
+          }
+        ]
+      },
+      {
+        "name": "离散列类型一致保留自定义配色",
+        "type": 1,
+        "by": "direction",
+        "values": [
+          {
+            "name": "Positive",
+            "value": "#654321"
+          },
+          {
+            "name": "Negative",
+            "value": "#7ED4AD"
+          }
+        ]
+      },
+      {
+        "name": "离散变数值恢复默认渐变",
+        "type": 2,
+        "by": "direction",
+        "values": [
+          {
+            "name": "low",
+            "value": "#f2dbdb"
+          },
+          {
+            "name": "high",
+            "value": "#ff6767"
+          }
+        ]
+      },
+      {
+        "name": "上传后允许用户主动选择离散映射并提示警告",
+        "type": 1,
+        "by": "direction",
+        "values": [
+          {
+            "name": 1.1,
+            "value": "#345678"
+          },
+          {
+            "name": 1.6,
+            "value": "#7ED4AD"
+          }
+        ]
+      },
+      {
+        "name": "旧离散映射重新上传数值列优先使用默认连续渐变",
+        "type": 2,
+        "by": "direction",
+        "values": [
+          {
+            "name": "low",
+            "value": "#f2dbdb"
+          },
+          {
+            "name": "high",
+            "value": "#ff6767"
+          }
+        ]
+      },
+      {
+        "name": "数值列原为离散映射仍按原始列类型判断重置",
+        "type": 1,
+        "by": "direction",
+        "values": [
+          {
+            "name": "Positive",
+            "value": "#937DC2"
+          },
+          {
+            "name": "Negative",
+            "value": "#7ED4AD"
+          }
+        ]
+      },
+      {
+        "name": "改名数值列未标记时保留原离散绑定",
+        "type": 1,
+        "by": "direction",
+        "values": [
+          {
+            "name": "Positive",
+            "value": "#765432"
+          },
+          {
+            "name": "Negative",
+            "value": "#7ED4AD"
+          }
+        ]
+      },
+      {
+        "name": "上传改名数值列并保存新属性标记后默认连续",
+        "type": 2,
+        "by": "score",
+        "values": [
+          {
+            "name": "low",
+            "value": "#f2dbdb"
+          },
+          {
+            "name": "high",
+            "value": "#ff6767"
+          }
+        ]
+      }
+    ],
+    "cleanup": [
+      {
+        "id": "381339234813870080",
+        "cleaned": true
+      }
+    ],
+    "nodeGenerationCompleted": true,
+    "createdRecords": [
+      {
+        "id": "381339234813870080",
+        "tmpFolderName": "15a124e1a0824cd1b08df7cc0022ed80"
+      }
+    ]
+  },
+  "artifacts": [
+    {
+      "module": "system",
+      "sha256": "14d859c3e88303b4a6dfdcbfb893606e7dfa909c18ec171a4855cf353f048672",
+      "path": "/mnt/f/IdeaProjects/goto-software/worktrees/goto/fix/027-箱线图R参数补齐/system/target/goto-manager.jar",
+      "retained_cache_path": "/home/gyq/.cache/codex-maven-repositories/4df0508dfe00aace3c0bc66b/repository/com/freedom/goto-system/1.0/goto-system-1.0.jar"
+    },
+    {
+      "module": "task",
+      "sha256": "5e466e07a42b121d1ee352b70566fc1bf5edab0ae3e05524715300389693b643",
+      "path": "/mnt/f/IdeaProjects/goto-software/worktrees/goto/fix/027-箱线图R参数补齐/task/target/goto-task.jar",
+      "retained_cache_path": "/home/gyq/.cache/codex-maven-repositories/4df0508dfe00aace3c0bc66b/repository/com/freedom/goto-task/1.0/goto-task-1.0.jar"
+    }
+  ],
+  "shutdown": {
+    "ports": [
+      {
+        "name": "system",
+        "port": 54038,
+        "closed": true
+      },
+      {
+        "name": "task",
+        "port": 54039,
+        "closed": true
+      },
+      {
+        "name": "web",
+        "port": 41552,
+        "closed": true
+      }
+    ],
+    "ownedWindowsJava": 0,
+    "loginRestored": true
+  },
+  "cleanup": {
+    "records": [
+      {
+        "id": "381330136307335168",
+        "folder": "6ace13a7ca934b4f97d88b3fedb9d028",
+        "apiDeleted": true,
+        "businessFolderAbsent": true
+      },
+      {
+        "id": "381329591718903808",
+        "folder": "819ce53a669a42b6a401c2fcbd663cce",
+        "apiDeleted": true,
+        "businessFolderAbsent": true
+      },
+      {
+        "id": "381333804381372416",
+        "folder": "8d5ea8fe9cf144479ce087f68861b20d",
+        "apiDeleted": true,
+        "businessFolderAbsent": true
+      },
+      {
+        "id": "381336780734988288",
+        "folder": "7f94075f155c4f4690fbaaa03ff0bb42",
+        "apiDeleted": true,
+        "businessFolderAbsent": true
+      },
+      {
+        "id": "381338618091798528",
+        "folder": "694db77b4e8b40a19ede53f24235a44f",
+        "apiDeleted": true,
+        "businessFolderAbsent": true
+      },
+      {
+        "id": "381335641733988352",
+        "folder": "91e7273abb574609ba4c784aeef5f031",
+        "apiDeleted": true,
+        "businessFolderAbsent": true
+      },
+      {
+        "id": "381339234813870080",
+        "folder": "15a124e1a0824cd1b08df7cc0022ed80",
+        "apiDeleted": true,
+        "businessFolderAbsent": true
+      }
+    ],
+    "scratch": [
+      {
+        "name": "json.txt",
+        "restoredOwnOutput": true,
+        "existingOtherOutputPreserved": false
+      },
+      {
+        "name": "json-row.txt",
+        "restoredOwnOutput": true,
+        "existingOtherOutputPreserved": false
+      }
+    ]
+  },
+  "worktrees": [
+    {
+      "repo": "goto-web",
+      "worktree": "/mnt/f/IdeaProjects/goto-software/worktrees/goto-web/fix/039-箱线图R参数补齐",
+      "sha": "a8fec9454eb81de3c1706eeafdb805507d84ef77",
+      "ignoredBeforeRemoval": "",
+      "merged": true,
+      "necessaryArtifactsRetained": true,
+      "removed": true
+    },
+    {
+      "repo": "goto",
+      "worktree": "/mnt/f/IdeaProjects/goto-software/worktrees/goto/fix/027-箱线图R参数补齐",
+      "sha": "8f15261ec25ec75e7a7c840e2e567d93b591be04",
+      "ignoredBeforeRemoval": "!! common/target/\n!! system/target/\n!! task/target/",
+      "merged": true,
+      "necessaryArtifactsRetained": true,
+      "removed": true
+    }
+  ],
+  "known_r_issue": {
+    "template": 170,
+    "type": "bar",
+    "pointType": "outlier",
+    "errorBarType": "none",
+    "public_error": "找不到对象'barEB_L'",
+    "status": "observed_not_fixed",
+    "reason": "未检查机密R包实现，内部原因未确认",
+    "passing_configuration": "Group映射、jitter、rmOutlier=FALSE、errorBarType=whole"
+  },
+  "verification_scope": {
+    "real_plot": "passed via actual task and WebSocket status 4",
+    "all_default_plot_configurations": "not claimed",
+    "deployed": false
+  }
+}
